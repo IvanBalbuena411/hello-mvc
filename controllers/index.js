@@ -1,8 +1,5 @@
 const User = require('../models/User');
 
-exports.search = (req, res) => {
-  res.send('Implementar')
-}
 exports.home = (req, res) => {
   User.find().sort('id').exec((err, users) => {
     for (let user of users) {

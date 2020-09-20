@@ -8,6 +8,10 @@ const app = express();
 // set views
 app.set('view engine', 'pug');
 app.set('views', './views');
+
+const router = require('./routes/index');
+app.use('/', router);
+
 // conexion a la base de datos
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useFindAndModify', false);
